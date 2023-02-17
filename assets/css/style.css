@@ -6,8 +6,10 @@
   --red: #ff014f;
   --bg: #010103;
   --abu: #c4cfde;
+  --shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
   --border: 0.1rem solid rgba(255, 255, 255, 0.3);
   --body: #212428;
+  --background: linear-gradient(145deg, #1e2024 0%, #23272b 100%);
 }
 
 .glass {
@@ -15,6 +17,14 @@
   border: 2px solid rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(25px);
   box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
+}
+
+.garis {
+  width: 1005;
+  padding: 0%;
+  margin-top: 5rem;
+  height: 2px;
+  background-color: black;
 }
 
 * {
@@ -165,7 +175,6 @@ section {
 }
 
 .login {
-  
   font-size: 13px;
   display: flex;
   flex-direction: row;
@@ -212,20 +221,29 @@ section {
 /* home */
 .home {
   margin: 70px 0;
-  height: 93  vh;
+  height: 93 vh;
 }
 .home .row {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   flex-wrap: wrap;
 }
 
 .home .row .image {
   flex: 1 1 25rem;
+  width: 500px;
+  height: 300px;
+  background: var(--background);
+  box-shadow: var(--shadow);
+  position: relative;
 }
 
 .home .row .image img {
   width: 100%;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  float: left;
 }
 
 .home .row .content {
@@ -323,38 +341,96 @@ section {
 }
 
 /* home  */
+.about {
+  margin-bottom: 20px;
+}
+.about h3 {
+  color: var(--red);
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.about h1 {
+  color: var(--abu);
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 72px;
+}
 .about .row {
   display: flex;
   align-items: center;
+  /* gap: 20 px; */
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
-.about .row .image {
-  flex: 1 1 45rem;
-}
 
-.about .row .image img {
-  width: 100%;
+.card:hover {
+  transform: translateY(-5px); /* membuat elemen naik 5px dari posisi semula */
+  background:black;
 }
-
-.about .row .content {
-  flex: 1 1 45rem;
-  padding: 2rem;
-}
-
-.about .row .content h3 {
-  font-size: 3rem;
+.about .row .card {
   color: #fff;
+  flex-direction: row;
+  padding: 50px 50px;
+  background: var(--background);
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  width: 380px;
+  margin-top  : 20px;
+  transition:   0.2s ease-in-out; /* memberikan efek transisi pada properti transform */
 }
 
-.about .row .content p {
-  font-size: 1.6rem;
-  color: #ccc;
-  padding: 1rem 0;
-  line-height: 1.8;
-  font-family: "poppins";
+.about .row .card i {
+  color: var(--red);
+  font-size: 25px;
+}
+.about .row .card h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 20px 0;
+}
+.about .row .card p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--abu);
+  padding: 0%;
+  margin: 0%;
 }
 
+/* portfolio */
+.menu h3 {
+  color: var(--red);
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.menu h1 {
+  color: var(--abu);
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 72px;
+}
 .menu .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));

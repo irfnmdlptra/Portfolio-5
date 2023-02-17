@@ -11,9 +11,19 @@
   section {
     padding: 2rem;
   }
-  .about {
-    margin-top: 500px;
+  .about .row{
+    justify-content: center;
   }
+  .home .row .image {
+    margin-top: 20rem;
+  }
+  .content .icons {
+    flex-wrap: nowrap;
+  }
+  .content .icons a {
+    width: 40px;
+    height: 40px;
+}
 }
 @media (max-width: 991px){
   #menu-btn {
@@ -38,7 +48,7 @@
   
 
   .header .navbar {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     text-align: left;
     position: absolute;
@@ -54,10 +64,12 @@
     height: calc(100vh - 9.5rem);
     color: white;
     transition: 2s;
+    display: none;
   }
 
   .header .navbar.active {
     right: -20%;
+    display: flex ;
   }
 
   .header .navbar a {
