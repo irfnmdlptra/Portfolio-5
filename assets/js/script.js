@@ -1,31 +1,44 @@
-let navbar = document.querySelector('.navbar');
-let login = document.querySelector('.login');
+const navbar = document.querySelector('.nav-menu');
+const login = document.querySelector('.login');
+const header = document.querySelector('.header');
+const links = document.querySelectorAll('.navbar2 a');
 
 document.querySelector('#menu-btn').onclick = () => {
-    navbar.classList.toggle('active');
-}
-window.querySelector('#menu-btn').onclick = () => {
-    navbar.classList.toggle('active');
-    login.classList.remove('login');
-
-  }
-  
-
-let cartItem = document.querySelector('.cart-items-container');
-
-document.querySelector('#cart-btn').onclick = () => {
-    cartItem.classList.toggle('active');
-    navbar.classList.remove('active');
-    searchForm.classList.remove('active');
-}
+  navbar.classList.toggle('active');
+};
 
 window.onscroll = () => {
+  navbar.classList.remove('active');
+};
+
+links.forEach(link => {
+  link.addEventListener('click', () => {
     navbar.classList.remove('active');
-    searchForm.classList.remove('active');
-    cartItem.classList.remove('active');
+  });
+});
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 0) {
+    header.style.backgroundColor = 'rgb(33 36 40 / 71%)';
+  } else {
+    header.style.backgroundColor = 'transparent';
+    header.style.backdropFilter = 'none';
+  }
+});
+// scrool smoth 
+let link = document.querySelectorAll('.scroll-link');
+
+for(let i = 0; i < link.length; i++) {
+  link[i].addEventListener('click', function(event) {
+    event.preventDefault();
+
+    let target = document.querySelector(this.getAttribute('href'));
+
+    target.scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
 }
-
-
 
 // input searchButton
 

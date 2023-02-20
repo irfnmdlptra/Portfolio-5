@@ -26,6 +26,8 @@
 }
 }
 @media (max-width: 991px){
+
+
   #menu-btn {
     display: block;
     position: absolute;
@@ -33,100 +35,17 @@
     top: 30px;
     font-size: 30px;
     color: var(--red);
-
   }
 
-  
-.login , .navbar a{    text-align: left;
-  position: relative;
-  right: 250px;
-  padding: 17px 50px 17px;
-  font-size: 2rem;
-  text-shadow: 2px 3px 5px rgb(0 0 0 / 50%);
-  margin: 0;
-  }
-  
 
   .header .navbar {
-    /* display: flex; */
-    flex-wrap: wrap;
-    text-align: left;
-    position: absolute;
-    top: 100%;
-    right: -120%;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    border: 2px solid rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(25px);
-    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
-    transition: all 0.3s ease;
-    width: 20rem;
-    height: calc(100vh - 9.5rem);
-    color: white;
-    transition: 2s;
     display: none;
   }
 
-  .header .navbar.active {
-    right: -20%;
-    display: flex ;
-  }
-
-  .header .navbar a {
-    color: #eee;
-    width: 30px;
-    text-align: left;
-    position: relative;
-    right: 320px;
-    padding: 0.2rem;
-    font-size: 2rem;
-    text-shadow: 2px 3px 5px rgb(0 0 0 / 50%);
-  }
-
-  
-  .navbar a::before {
-    content: "";
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    transform: scale(0);
-    transition: all 3s ease;
-  }
-  
-  .navbar a:hover::before {
-    transform: scale(2);
-    opacity: 0;
-  }
-  
-  .navbar a:hover {
-    background: linear-gradient(145deg, #23272b 0%, #1e2024 100%);
-    box-shadow: -10px -10px 19px #1c1e22, 10px 10px 19px #262a2e;
-    cursor: pointer;
-  }
-  
-
-  .header .search-form {
-    width: 90%;
-    right: 2rem;
-  }
-
-  .home {
-    background-position: left;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .home .content h3 {
-    font-size: 4.5rem;
-  }
-
-  .home .content p {
-    font-size: 1.5rem;
+  .nav-menu.active {
+    left: 0%;
   }
 }
-
 @media (max-width: 450px) {
   html {
     font-size: 50%;

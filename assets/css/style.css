@@ -7,8 +7,8 @@
   --bg: #010103;
   --abu: #c4cfde;
   --shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
-  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
-  --body: #212428;
+  --border: 0.1rem solid rgba(105, 114, 126, 0.9);
+  --bd: #212428;
   --background: linear-gradient(145deg, #1e2024 0%, #23272b 100%);
 }
 
@@ -18,7 +18,21 @@
   backdrop-filter: blur(25px);
   box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
 }
+.hitam {
+  position: fixed;
+  left: 0;right: 0;top: 0;bottom: 0;
+  background: #13131a77;
+  z-index: 9999;
+  transition: all 2s ease;
+  opacity: 0;
+}
+.hitam.active{
+  opacity: 1;
+}
 
+.d-none {
+  display: none;
+}
 .garis {
   width: 1005;
   padding: 0%;
@@ -60,7 +74,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background: var(--body);
+  background: var(--bd);
 }
 
 section {
@@ -223,6 +237,132 @@ section {
   margin: 70px 0;
   height: 93 vh;
 }
+
+.nav-menu .cont {
+  padding: 0 2rem 0 4rem;
+}
+.nav-menu .cont > p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: rgba(134, 144, 158, 0.9);
+  padding: 2rem 0;
+  border-bottom: var(--border);
+}
+
+.nav-menu {
+  width: 38rem;
+  height: 100vh;
+  background: var(--bd);
+  position: fixed;
+  z-index: 9999;
+  left: -100%;
+  top: 0;
+  overflow: auto;
+  transition: all 2s ease;
+}
+.nav-menu .cont > .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.nav-menu .cont .logo .logo-nav {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--black);
+  border: 3px solid var(--bd);
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+.nav-menu .cont .logo .logo-nav img {
+  width: 100%;
+}
+.nav-menu .cont .logo .close {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--black);
+  border: 3px solid var(--bd);
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-menu .cont .logo .close a {
+  font-size: 25px;
+  color: var(--red);
+}
+.nav-menu .cont .navbar2 {
+  display: block;
+  padding-bottom: 7rem;
+  border-bottom: var(--border);
+}
+.nav-menu .cont .navbar2 a {
+  text-transform: uppercase;
+  color: #c4cfde;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-top: 3rem ;
+}
+
+/* .icons menu  */
+ .icons2 {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 116px;
+  margin-top: 20px 0 5rem 0;
+  
+}
+.cont .icons2 .faficon {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 200px;
+  height: 80px;
+} .icons2 .faficon img {
+  width: 20px;
+}
+.cont .icons2 a {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #1e2024 0%, #23272b 100%);
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  border-radius: 6px;
+}
+.cont .icons2 a img {
+  width: 30px;
+  transition: all 0.3s ease-in-out;
+}
+.cont .icons2 a img:hover, .icons a img:hover{
+  transform: scale(1.2);
+}
+
+
+.cont .icons2 p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--abu);
+  padding: 2rem 0 1rem 0;
+}
+
+/* .icons menu  */
+
 .home .row {
   display: flex;
   align-items: flex-end;
@@ -310,7 +450,7 @@ section {
   height: 80px;
 }
 .content .icons .faficon img {
-  width: 20px;
+  width: 30px;
 }
 .content .icons a {
   width: 60px;
@@ -370,10 +510,9 @@ section {
   flex-wrap: wrap;
 }
 
-
 .card:hover {
   transform: translateY(-5px); /* membuat elemen naik 5px dari posisi semula */
-  background:black;
+  background: black;
 }
 .about .row .card {
   color: #fff;
@@ -383,8 +522,8 @@ section {
   box-shadow: var(--shadow);
   border-radius: 10px;
   width: 380px;
-  margin-top  : 20px;
-  transition:   0.2s ease-in-out; /* memberikan efek transisi pada properti transform */
+  margin-top: 20px;
+  transition: 0.2s ease-in-out; /* memberikan efek transisi pada properti transform */
 }
 
 .about .row .card i {
