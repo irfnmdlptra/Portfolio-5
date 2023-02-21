@@ -120,7 +120,6 @@ section {
   align-items: center;
   margin: auto;
   height: 100px;
-  justify-content: space-between;
   padding: 1.5rem 1%;
   position: fixed;
   top: 0;
@@ -169,6 +168,11 @@ section {
   color: #fff;
 }
 
+.header .navbar a.active {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .header .navbar {
   display: flex;
   justify-content: flex-end;
@@ -189,7 +193,7 @@ section {
 }
 
 .login {
-  font-size: 13px;
+  font-size: 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -198,7 +202,7 @@ section {
   justify-content: center !important;
   color: #ff014f !important;
   width: 98.97px;
-  height: 55px;
+  height: 45px;
   background: linear-gradient(145deg, #1e2024 0%, #23272b 100%);
   box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
   border-radius: 6px;
@@ -333,7 +337,7 @@ section {
 }
 .cont .icons2 a {
   width: 60px;
-  height: 60px;
+  height: 50px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -366,8 +370,10 @@ section {
 .home .row {
   display: flex;
   align-items: flex-end;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
 }
+
 
 .home .row .image {
   flex: 1 1 25rem;
@@ -452,9 +458,12 @@ section {
 .content .icons .faficon img {
   width: 30px;
 }
+.content .icons a:hover{
+  transform: translateY(-5px);
+}
 .content .icons a {
   width: 60px;
-  height: 60px;
+  height: 50px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -481,10 +490,10 @@ section {
 }
 
 /* home  */
-.about {
+.features {
   margin-bottom: 20px;
 }
-.about h3 {
+.features h3 {
   color: var(--red);
   font-family: "Montserrat";
   font-style: normal;
@@ -494,7 +503,7 @@ section {
   text-transform: uppercase;
 }
 
-.about h1 {
+.features h1 {
   color: var(--abu);
   font-family: "Montserrat";
   font-style: normal;
@@ -502,35 +511,40 @@ section {
   font-size: 60px;
   line-height: 72px;
 }
-.about .row {
+.features .row {
   display: flex;
   align-items: center;
   /* gap: 20 px; */
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-
-.card:hover {
-  transform: translateY(-5px); /* membuat elemen naik 5px dari posisi semula */
-  background: black;
+.hover{
+  width: 100%;
+  height: 100%;
 }
-.about .row .card {
+
+.hover:hover {
+  transform: translateY(-8px); /* membuat elemen naik 5px dari posisi semula */
+  cursor: pointer;
+}
+.features .row .card {
+  overflow: hidden;
   color: #fff;
   flex-direction: row;
   padding: 50px 50px;
   background: var(--background);
   box-shadow: var(--shadow);
   border-radius: 10px;
-  width: 380px;
+  width: 350px;
   margin-top: 20px;
   transition: 0.2s ease-in-out; /* memberikan efek transisi pada properti transform */
 }
 
-.about .row .card i {
+.features .row .card i {
   color: var(--red);
   font-size: 25px;
 }
-.about .row .card h2 {
+.features .row .card h2 {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
@@ -538,7 +552,7 @@ section {
   line-height: 32px;
   margin: 20px 0;
 }
-.about .row .card p {
+.features .row .card p {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
@@ -549,70 +563,7 @@ section {
   margin: 0%;
 }
 
-/* portfolio */
-.menu h3 {
-  color: var(--red);
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.menu h1 {
-  color: var(--abu);
-  text-align: center;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 72px;
-}
-.menu .box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 1.5rem;
-}
-
-.menu .box-container .box {
-  padding: 5rem;
-  text-align: center;
-  border: 2px solid rgb(51, 48, 48);
-}
-
-.menu .box-container .box img {
-  height: 10rem;
-}
-
-.menu .box-container .box h3 {
-  color: #fff;
-  font-size: 2rem;
-  padding: 1rem 0;
-}
-
-.menu .box-container .box .price {
-  color: #fff;
-  font-size: 2.5rem;
-  padding: 5rem 0;
-}
-
-.menu .box-container .box .price span {
-  color: rgb(255, 1, 1);
-  font-size: 1.5rem;
-  text-decoration: line-through;
-  font-weight: lighter;
-}
-
-.menu .box-container .box:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(25px);
-  box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
-}
-
-/* .menu .box-container .box:hover > *{
+/* .portfolio .box-container .box:hover > *{
     color: var(--black);
 } */
 
