@@ -28,6 +28,23 @@
   justify-content: center;
   display: flex;
 }
+#menu-btn {
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 30px;
+  color: var(--red);
+}
+
+
+.header .navbar {
+  display: none;
+}
+
+.nav-menu.active {
+  left: 0%;
+}
 }
 @media (max-width: 991px){
 

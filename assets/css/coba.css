@@ -19,6 +19,7 @@
   font-weight: 700;
   font-size: 60px;
   line-height: 72px;
+  padding-top:5px ;
 }
 .portfolio .box-container {
   display: flex;
@@ -48,14 +49,21 @@
   padding: 2rem 0;
 }
 .portfolio .box-container .box .title span {
-    color: var(--red);
+  color: var(--red);
     font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
-  font-size: 15px;
-  text-transform: uppercase;
-  line-height: 18px;
-}
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 18px;
+  }
+  .portfolio .box-container .box .title span i:active {
+    color: var(--red);
+  }
+  .portfolio .box-container .box .title span i{
+    color: #fff;
+    margin-right: 5px;
+  }
 .portfolio .box-container .box .desc {
 font-family: 'Montserrat';
 font-style: normal;
